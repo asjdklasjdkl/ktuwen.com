@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Qingdao Aikang Trading Co., Ltd. · 贞果益</title>
+  <meta name="description" content="Qingdao Aikang Trading Co., Ltd. is a China-based health food e-commerce company operating the Zhen Guo Yi brand, with fruit and vegetable powder drinks, collagen drinks, and hyaluronic acid drinks sold through retail stores and Taobao." />
+  <meta property="og:title" content="Qingdao Aikang Trading Co., Ltd." />
+  <meta property="og:description" content="Health food e-commerce, own brand Zhen Guo Yi, retail and online sales channels." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ktuwen.com/" />
+  <link rel="canonical" href="https://www.ktuwen.com/" />
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --ink: #132033;
+      --muted: #5f6d80;
+      --line: #dfe5ee;
+      --brand: #0b5cab;
+      --brand-dark: #083f77;
+      --accent: #e8f2ff;
+      --green: #0f7a55;
+      --gold: #b88722;
+      --soft-green: #eef8f3;
+      --soft-gold: #fff7e8;
+      --shadow: 0 18px 55px rgba(19, 32, 51, 0.10);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(11, 92, 171, 0.12), transparent 30%),
+        radial-gradient(circle at 88% 10%, rgba(15, 122, 85, 0.10), transparent 28%),
+        var(--bg);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(247, 248, 251, 0.84);
+      border-bottom: 1px solid rgba(223, 229, 238, 0.8);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 750;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--brand), var(--green));
+      box-shadow: 0 10px 30px rgba(11, 92, 171, 0.25);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    nav a:hover { color: var(--brand); }
+
+    .hero { padding: 88px 0 54px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--brand-dark);
+      background: rgba(255, 255, 255, 0.76);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(15, 122, 85, 0.12);
+      flex: 0 0 auto;
+    }
+
+    h1 {
+      margin: 22px 0 18px;
+      font-size: clamp(42px, 6vw, 74px);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+
+    .lead {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.75;
+      margin: 0 0 28px;
+    }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 14px;
+      font-weight: 750;
+      font-size: 14px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      transition: 0.18s ease;
+    }
+    .btn.primary {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #fff;
+      box-shadow: 0 14px 30px rgba(11, 92, 171, 0.22);
+    }
+    .btn:hover { transform: translateY(-1px); }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(223, 229, 238, 0.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 7px;
+      background: linear-gradient(90deg, var(--brand), var(--green), var(--gold));
+    }
+    .card-title { font-size: 14px; color: var(--muted); font-weight: 750; text-transform: uppercase; letter-spacing: 0.08em; }
+    .company-cn { font-size: 26px; font-weight: 850; margin: 10px 0 6px; }
+    .status {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      color: var(--green);
+      background: rgba(15, 122, 85, 0.08);
+      border: 1px solid rgba(15, 122, 85, 0.18);
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin: 10px 0 22px;
+    }
+
+    .fact-list { display: grid; gap: 14px; margin-top: 20px; }
+    .fact {
+      display: grid;
+      gap: 3px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fbfcfe;
+    }
+    .label { color: var(--muted); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+    .value { font-weight: 700; color: var(--ink); }
+
+    section { padding: 58px 0; }
+    .section-head { max-width: 790px; margin-bottom: 28px; }
+    .section-head h2 { margin: 0 0 12px; font-size: clamp(30px, 4vw, 46px); line-height: 1.08; letter-spacing: -0.04em; }
+    .section-head p { margin: 0; color: var(--muted); font-size: 17px; }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    .service-card, .product-card, .timeline-item {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 10px 35px rgba(19, 32, 51, 0.06);
+    }
+    .product-card { position: relative; overflow: hidden; }
+    .product-card::after {
+      content: "";
+      position: absolute;
+      right: -42px;
+      top: -42px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(15, 122, 85, 0.08);
+      pointer-events: none;
+    }
+    .product-image {
+      margin: -8px -8px 18px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(223, 229, 238, 0.9);
+      background: #f6f8fb;
+      position: relative;
+      z-index: 1;
+    }
+    .product-image img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .product-card h3, .product-card p, .product-card .icon { position: relative; z-index: 1; }
+    .showroom {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1.16fr 0.84fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .showroom-main, .showroom-side {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(19, 32, 51, 0.08);
+    }
+    .showroom-main img, .showroom-side img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .showroom-main { min-height: 420px; position: relative; }
+    .showroom-side { display: grid; grid-template-rows: 1fr 1fr; gap: 0; }
+    .showroom-caption {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      color: #fff;
+      background: linear-gradient(135deg, rgba(19, 32, 51, 0.84), rgba(15, 122, 85, 0.78));
+      backdrop-filter: blur(12px);
+    }
+    .showroom-caption strong { display: block; font-size: 18px; margin-bottom: 2px; }
+    .showroom-caption span { color: rgba(255,255,255,0.82); font-size: 14px; }
+    .icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--accent);
+      color: var(--brand);
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+    .icon.green { background: var(--soft-green); color: var(--green); }
+    .icon.gold { background: var(--soft-gold); color: var(--gold); }
+    .service-card h3, .product-card h3, .timeline-item h3 { margin: 0 0 8px; font-size: 19px; letter-spacing: -0.02em; }
+    .service-card p, .product-card p, .timeline-item p { margin: 0; color: var(--muted); }
+
+    .brand-panel {
+      display: grid;
+      grid-template-columns: 0.88fr 1.12fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .brand-card {
+      background: linear-gradient(135deg, #113f67, #0f7a55);
+      color: #fff;
+      border-radius: 30px;
+      padding: 30px;
+      box-shadow: 0 24px 60px rgba(11, 92, 171, 0.18);
+      min-height: 100%;
+    }
+    .brand-card .brand-name { font-size: clamp(40px, 6vw, 70px); font-weight: 900; letter-spacing: 0.04em; margin: 14px 0 10px; }
+    .brand-card p { color: rgba(255,255,255,0.84); margin: 0; }
+    .brand-note { display: inline-flex; padding: 7px 11px; border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; font-size: 13px; font-weight: 750; }
+    .brand-photo {
+      margin-top: 28px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.12);
+      box-shadow: 0 22px 50px rgba(0,0,0,0.18);
+    }
+    .brand-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 10px 35px rgba(19, 32, 51, 0.06);
+    }
+    .panel h3 { margin: 0 0 14px; font-size: 22px; letter-spacing: -0.025em; }
+    .panel p, .panel li { color: var(--muted); }
+    .panel ul { padding-left: 20px; margin: 12px 0 0; }
+
+    .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .year {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 74px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--brand-dark);
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .contact-band {
+      background: linear-gradient(135deg, #0b5cab, #0f7a55);
+      color: #fff;
+      border-radius: 30px;
+      padding: 38px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      box-shadow: 0 24px 60px rgba(11, 92, 171, 0.22);
+    }
+    .contact-band h2 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 42px); letter-spacing: -0.04em; }
+    .contact-band p { margin: 0; color: rgba(255,255,255,0.82); }
+    .contact-band .btn { border-color: rgba(255,255,255,0.24); }
+
+    footer {
+      padding: 34px 0 46px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+    }
+
+    @media (max-width: 920px) {
+      nav { display: none; }
+      .hero { padding-top: 64px; }
+      .hero-grid, .two-col, .brand-panel, .contact-band, .showroom { grid-template-columns: 1fr; }
+      .grid-3, .grid-2, .timeline { grid-template-columns: 1fr; }
+      .showroom-main { min-height: 320px; }
+      .showroom-side { grid-template-rows: none; grid-template-columns: 1fr; }
+      .contact-band { padding: 28px; }
+      .footer-inner { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#top" aria-label="Qingdao Aikang Trading home">
+        <span class="logo-mark">AK</span>
+        <span>Qingdao Aikang Trading</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#brand">Brand</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#channels">Channels</a></li>
+          <li><a href="#company">Company</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Health food e-commerce · Own brand operator</div>
+          <h1>Nutrition-focused products for everyday wellness.</h1>
+          <p class="lead">
+            Qingdao Aikang Trading Co., Ltd. is a China-based health food e-commerce
+            company established in 2020. We operate our own brand <strong>贞果益</strong>
+            and provide fruit and vegetable powder drinks, collagen drinks, hyaluronic
+            acid drinks, and related wellness products through retail and online channels.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="mailto:admin@ktuwen.com">Contact us</a>
+            <a class="btn" href="#brand">View our brand</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Company registration summary">
+          <div class="card-title">Registered business</div>
+          <div class="company-cn">青岛爱康贸易有限公司</div>
+          <div class="value">Qingdao Aikang Trading Co., Ltd.</div>
+          <div class="status"><span class="dot"></span> Active business</div>
+          <div class="fact-list">
+            <div class="fact">
+              <span class="label">Unified Social Credit Code</span>
+              <span class="value">91370285MA3UCLJR48</span>
+            </div>
+            <div class="fact">
+              <span class="label">Legal Representative</span>
+              <span class="value">Wang Zijia</span>
+            </div>
+            <div class="fact">
+              <span class="label">Own Brand</span>
+              <span class="value">贞果益 · Zhen Guo Yi</span>
+            </div>
+            <div class="fact">
+              <span class="label">Established</span>
+              <span class="value">November 13, 2020</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="brand">
+      <div class="container brand-panel">
+        <div class="brand-card">
+          <span class="brand-note">Own brand</span>
+          <div class="brand-name">贞果益</div>
+          <p>
+            Zhen Guo Yi is our self-operated health food and nutrition drink brand.
+            The brand focuses on accessible, convenient, and pleasant daily nutrition products
+            designed for modern consumers who value balanced routines and easy preparation.
+          </p>
+          <div class="brand-photo">
+            <img src="assets/products/product-family-boxes.jpg" alt="贞果益 product family including fruit and vegetable powder and hyaluronic acid drink packaging" />
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Brand positioning</h3>
+          <p>
+            贞果益 develops and sells functional-style nutrition drinks and health food products,
+            including fruit and vegetable powder beverages, collagen drinks, and hyaluronic acid drinks.
+            We place emphasis on product presentation, customer experience, supply coordination,
+            and stable online/offline sales operations.
+          </p>
+          <ul>
+            <li>Own brand operation for health food and nutrition beverage products</li>
+            <li>Sales through physical retail stores and Taobao e-commerce channels</li>
+            <li>Positive customer feedback and repeat-purchase oriented product categories</li>
+            <li>Practical product formats suitable for daily consumption scenarios</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="container">
+        <div class="section-head">
+          <h2>Product categories under 贞果益.</h2>
+          <p>
+            Our product portfolio focuses on convenient nutrition drink formats with clear product positioning,
+            approachable packaging, and sales performance across store and e-commerce scenarios.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="product-card">
+            <div class="product-image">
+              <img src="assets/products/fruit-vegetable-powder-lifestyle.jpg" alt="贞果益 fruit and vegetable powder drink packaging with prepared beverage" />
+            </div>
+            <div class="icon green">FV</div>
+            <h3>Fruit & vegetable powder drinks</h3>
+            <p>Powder beverage products built around fruit and vegetable ingredients, designed for simple preparation and everyday consumption.</p>
+          </article>
+          <article class="product-card">
+            <div class="product-image">
+              <img src="assets/products/model-product-box-pouch.jpg" alt="贞果益 hyaluronic acid dietary fiber drink box and pouch held by customer" />
+            </div>
+            <div class="icon gold">CP</div>
+            <h3>Collagen drinks</h3>
+            <p>Collagen beverage products for beauty and wellness-oriented consumers, with attention to taste, convenience, and repeat purchase experience.</p>
+          </article>
+          <article class="product-card">
+            <div class="product-image">
+              <img src="assets/products/hyaluronic-acid-pouches.jpg" alt="贞果益 hyaluronic acid dietary fiber drink pouches and product box" />
+            </div>
+            <div class="icon">HA</div>
+            <h3>Hyaluronic acid drinks</h3>
+            <p>Hyaluronic acid drink products positioned for modern nutrition and beauty routines, sold through both retail and online channels.</p>
+          </article>
+        </div>
+        <div class="showroom" aria-label="Representative product photos">
+          <figure class="showroom-main">
+            <img src="assets/products/hyaluronic-acid-box.jpg" alt="贞果益 hyaluronic acid dietary fiber drink retail box" />
+            <figcaption class="showroom-caption">
+              <strong>Representative product packaging</strong>
+              <span>Real product photography used for brand and e-commerce presentation.</span>
+            </figcaption>
+          </figure>
+          <div class="showroom-side">
+            <img src="assets/products/product-family-boxes.jpg" alt="贞果益 product boxes in three product categories" />
+            <img src="assets/products/model-product-pouch.jpg" alt="Customer holding a 贞果益 hyaluronic acid dietary fiber drink pouch" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="channels">
+      <div class="container">
+        <div class="section-head">
+          <h2>Retail presence and e-commerce operations.</h2>
+          <p>
+            We combine product sales in physical stores with Taobao e-commerce operations. This helps us reach
+            local shoppers as well as online customers looking for convenient health food and nutrition drink products.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="service-card">
+            <div class="icon green">01</div>
+            <h3>Physical retail stores</h3>
+            <p>Products are supplied and sold through offline retail scenarios, supporting direct consumer access and product experience.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon">02</div>
+            <h3>Taobao e-commerce</h3>
+            <p>Online sales operations support product discovery, customer communication, order management, and after-sales service.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon gold">03</div>
+            <h3>Customer feedback</h3>
+            <p>The brand has received positive sales performance and customer reviews in both store and online channels.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="history">
+      <div class="container">
+        <div class="section-head">
+          <h2>From registration to brand operation.</h2>
+          <p>
+            Since its establishment in 2020, Qingdao Aikang Trading has gradually developed from a registered
+            trading company into a focused health food e-commerce and own-brand operator.
+          </p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="year">2020</span>
+            <h3>Company established</h3>
+            <p>Qingdao Aikang Trading Co., Ltd. was registered in Qingdao, Shandong, laying the foundation for trading and product operations.</p>
+          </article>
+          <article class="timeline-item">
+            <span class="year">2021</span>
+            <h3>Category exploration</h3>
+            <p>The company focused on consumer health food opportunities and began building operational experience in nutrition-related products.</p>
+          </article>
+          <article class="timeline-item">
+            <span class="year">2022–2023</span>
+            <h3>Brand and channel growth</h3>
+            <p>贞果益 product lines expanded across fruit and vegetable powder drinks, collagen drinks, and hyaluronic acid drink categories.</p>
+          </article>
+          <article class="timeline-item">
+            <span class="year">2024–Now</span>
+            <h3>Digital operations</h3>
+            <p>The company continues to improve product presentation, online operations, supplier coordination, and infrastructure for business growth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="company">
+      <div class="container two-col">
+        <div class="panel">
+          <h3>Company profile</h3>
+          <p>
+            Qingdao Aikang Trading Co., Ltd. is registered in Qingdao, Shandong, China.
+            The company focuses on health food e-commerce, own-brand product operation,
+            online/offline sales coordination, product presentation, and customer service.
+          </p>
+          <ul>
+            <li>Chinese name: 青岛爱康贸易有限公司</li>
+            <li>English name: Qingdao Aikang Trading Co., Ltd.</li>
+            <li>Business status: Active</li>
+            <li>Registered capital: RMB 500,000</li>
+            <li>Jurisdiction: Qingdao, Shandong, China</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Registered address</h3>
+          <p>
+            Room 347, Unit 1, Building 45, No. 12 Tuandao West Road,<br />
+            Laixi, Qingdao, Shandong, China
+          </p>
+          <div class="fact-list">
+            <div class="fact">
+              <span class="label">Postal Code</span>
+              <span class="value">266699</span>
+            </div>
+            <div class="fact">
+              <span class="label">Contact Email</span>
+              <span class="value"><a href="mailto:admin@ktuwen.com">admin@ktuwen.com</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="infrastructure">
+      <div class="container">
+        <div class="section-head">
+          <h2>Digital infrastructure use case.</h2>
+          <p>
+            Our online infrastructure is intended for company website hosting, product information pages,
+            business applications, API services, data backup systems, and deployment/testing environments
+            supporting legitimate e-commerce and trading operations.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="service-card">
+            <div class="icon">WEB</div>
+            <h3>Company website</h3>
+            <p>Public company information, brand introduction, contact details, and business presentation for partners and service providers.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon green">OPS</div>
+            <h3>E-commerce operations</h3>
+            <p>Product information management, customer communication support, order-related tools, and operational data organization.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon gold">BKP</div>
+            <h3>Backups and testing</h3>
+            <p>Data backup, testing environments, and deployment support for legitimate company systems and business workflows.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-band">
+          <div>
+            <h2>Contact Qingdao Aikang Trading.</h2>
+            <p>For business communication, partnership inquiries, and service verification, please contact us by email.</p>
+          </div>
+          <a class="btn" href="mailto:admin@ktuwen.com">admin@ktuwen.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Qingdao Aikang Trading Co., Ltd. All rights reserved.</div>
+      <div>青岛爱康贸易有限公司 · Unified Social Credit Code: 91370285MA3UCLJR48</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
